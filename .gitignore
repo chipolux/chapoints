@@ -1,0 +1,7 @@
+# platformio folders
+.pio
+
+# qt creator files
+build*/
+*.user
+.qmake.stash
