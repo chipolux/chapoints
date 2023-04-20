@@ -1,0 +1,2 @@
+# secrets like twitch client ids, redirect uris, etc.
+secrets.h

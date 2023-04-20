@@ -1,0 +1,6 @@
+# Twitch ChaP
+
+## Requirements
+
+* Qt 6.4 (anything 6.2+ should be fine)
+* Create `secrets.h` using the `secrets.h.template`
