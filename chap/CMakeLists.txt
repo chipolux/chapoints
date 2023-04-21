@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(QT_MODULES
     Core
+    Network
     Qml
     Quick
     QuickControls2
@@ -27,6 +28,8 @@ set(PROJECT_SOURCES
     qtutils.cpp
     qtutils.h
     secrets.h
+    shockcollarmanager.cpp
+    shockcollarmanager.h
     twitchmanager.cpp
     twitchmanager.h
 )

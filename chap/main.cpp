@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
         qWarning() << "Failed to register custom fonts!";
     } else {
 #ifdef Q_OS_WIN
-        app.setFont({u"Fira Code"_qs, 11, QFont::Normal});
+        app.setFont({u"Fira Code"_qs, 10, QFont::Normal});
 #else
         app.setFont({u"Fira Code"_qs, 13, QFont::Normal});
 #endif
@@ -77,6 +77,7 @@ int main(int argc, char *argv[])
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty(u"core"_qs, core);
     ctx->setContextProperty(u"twitch"_qs, core->twitch());
+    ctx->setContextProperty(u"shockCollar"_qs, core->shockCollar());
 
     qDebug() << "Loading QML...";
     const QUrl url(u"qrc:/chap/qml/main.qml"_qs);

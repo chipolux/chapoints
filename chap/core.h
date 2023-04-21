@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QtQml>
 
+#include "shockcollarmanager.h"
 #include "twitchmanager.h"
 
 class Core : public QObject
@@ -19,6 +20,7 @@ class Core : public QObject
     bool eventFilter(QObject *object, QEvent *event) override;
 
     TwitchManager *twitch() const { return m_twitchManager; }
+    ShockCollarManager *shockCollar() const { return m_shockCollarManager; }
 
   public slots:
     void save();
@@ -31,6 +33,7 @@ class Core : public QObject
   private:
     QLocalServer *m_localServer;
     TwitchManager *m_twitchManager;
+    ShockCollarManager *m_shockCollarManager;
 };
 
 #endif // CORE_H
