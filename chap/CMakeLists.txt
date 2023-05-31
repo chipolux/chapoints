@@ -30,6 +30,8 @@ set(PROJECT_SOURCES
     secrets.h
     shockcollarmanager.cpp
     shockcollarmanager.h
+    smokemachinemanager.cpp
+    smokemachinemanager.h
     twitchmanager.cpp
     twitchmanager.h
 )

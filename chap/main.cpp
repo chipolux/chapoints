@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
     ctx->setContextProperty(u"core"_qs, core);
     ctx->setContextProperty(u"twitch"_qs, core->twitch());
     ctx->setContextProperty(u"shockCollar"_qs, core->shockCollar());
+    ctx->setContextProperty(u"smokeMachine"_qs, core->smokeMachine());
 
     qDebug() << "Loading QML...";
     const QUrl url(u"qrc:/chap/qml/main.qml"_qs);

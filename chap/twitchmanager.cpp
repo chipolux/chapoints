@@ -20,7 +20,6 @@ TwitchManager::TwitchManager(QObject *parent)
     , m_autoLogin(false)
     , m_userName()
     , m_rewards()
-    , m_redemptions()
 {
     QSettings settings;
     settings.beginGroup(u"Twitch"_qs);
@@ -646,13 +645,13 @@ void TwitchManager::getRedemptionsFinished()
     case 200: {
         if (reply->isOpen()) {
             QJsonObject response = QJsonDocument::fromJson(reply->readAll()).object();
-            QJsonArray redemptions = response.value(u"data"_qs).toArray();
-            qInfo() << "Got redemptions:" << redemptions.count();
-            m_redemptions.clear();
-            for (auto value : redemptions) {
-                m_redemptions.append(value.toObject().toVariantMap());
+            QJsonArray objs = response.value(u"data"_qs).toArray();
+            qInfo() << "Got redemptions:" << objs.count();
+            QList<QVariantMap> redemptions;
+            for (auto value : objs) {
+                redemptions.append(value.toObject().toVariantMap());
             }
-            emit redemptionsChanged(m_redemptions);
+            emit gotRedemptions(redemptions);
         } else {
             qWarning() << "Get Redemptions Failed: Could not read reply!";
         }

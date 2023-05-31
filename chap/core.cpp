@@ -11,6 +11,7 @@ Core::Core(QObject *parent)
     , m_localServer(new QLocalServer(this))
     , m_twitchManager(new TwitchManager(this))
     , m_shockCollarManager(new ShockCollarManager(this))
+    , m_smokeMachineManager(new SmokeMachineManager(this))
 {
     // setup handler so we can get route callbacks
     parent->installEventFilter(this);

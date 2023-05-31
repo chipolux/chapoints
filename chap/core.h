@@ -6,6 +6,7 @@
 #include <QtQml>
 
 #include "shockcollarmanager.h"
+#include "smokemachinemanager.h"
 #include "twitchmanager.h"
 
 class Core : public QObject
@@ -21,6 +22,7 @@ class Core : public QObject
 
     TwitchManager *twitch() const { return m_twitchManager; }
     ShockCollarManager *shockCollar() const { return m_shockCollarManager; }
+    SmokeMachineManager *smokeMachine() const { return m_smokeMachineManager; }
 
   public slots:
     void save();
@@ -34,6 +36,7 @@ class Core : public QObject
     QLocalServer *m_localServer;
     TwitchManager *m_twitchManager;
     ShockCollarManager *m_shockCollarManager;
+    SmokeMachineManager *m_smokeMachineManager;
 };
 
 #endif // CORE_H

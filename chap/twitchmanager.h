@@ -36,6 +36,7 @@ class TwitchManager : public QObject
 
   signals:
     void validated();
+    void gotRedemptions(QList<QVariantMap> redemptions);
 
   public slots:
     void refresh();
@@ -79,7 +80,6 @@ class TwitchManager : public QObject
 
     RO_PROP(QString, userName, setUserName)
     RO_PROP(QList<QVariantMap>, rewards, setRewards)
-    RO_PROP(QList<QVariantMap>, redemptions, setRedemptions)
 };
 
 #endif // TWITCHMANAGER_H
