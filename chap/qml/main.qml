@@ -131,7 +131,7 @@ ApplicationWindow {
             if (!!smokeReward) {
                 var data = {
                     "id": smokeReward.id,
-                    "cost": 100,
+                    "cost": 1,
                     "is_paused": online ? "false" : "true",
                     "is_global_cooldown_enabled": "true",
                     "global_cooldown_seconds": 2 * 60,
@@ -223,6 +223,7 @@ ApplicationWindow {
                 onClicked: {
                     var data = {
                         "id": shockReward.id,
+                        "cost": 100,
                         "is_paused": "false",
                         "is_global_cooldown_enabled": "true",
                         "global_cooldown_seconds": 60,
@@ -291,7 +292,7 @@ ApplicationWindow {
                 onClicked: {
                     var data = {
                         "title": "Hotbox The Streamer",
-                        "cost": 100,
+                        "cost": 1,
                         "is_paused": "true",
                         "is_enabled": "true",
                         "is_global_cooldown_enabled": "true",
@@ -310,6 +311,7 @@ ApplicationWindow {
                 onClicked: {
                     var data = {
                         "id": smokeReward.id,
+                        "cost": 1,
                         "is_paused": "false",
                         "is_global_cooldown_enabled": "true",
                         "global_cooldown_seconds": 2 * 60,
