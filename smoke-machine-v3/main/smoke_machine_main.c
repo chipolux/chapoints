@@ -1,3 +1,4 @@
+// vim: foldmethod=marker:foldmarker={{{,}}}
 #include <inttypes.h>
 
 #include "esp_chip_info.h"
@@ -7,10 +8,12 @@
 #include "freertos/task.h"
 #include "nvs_flash.h"
 
+#include "smoke_machine_server.h"
 #include "smoke_machine_wifi.h"
 
 static const char *TAG = "sm-main";
 
+/* app main {{{ */
 void app_main(void)
 {
     ESP_LOGI(TAG, "Smoke Machine Controller v3");
@@ -45,4 +48,6 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     smoke_machine_wifi_init();
+    smoke_machine_server_init();
 }
+/* app main }}} */

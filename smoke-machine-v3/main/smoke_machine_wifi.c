@@ -1,3 +1,4 @@
+// vim: foldmethod=marker:foldmarker={{{,}}}
 #include "smoke_machine_wifi.h"
 
 #include "esp_event.h"
@@ -14,6 +15,7 @@
 
 static const char *TAG = "sm-wifi";
 
+/* wifi/ip event handler {{{ */
 static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id,
                           void *event_data)
 {
@@ -36,6 +38,7 @@ static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_
                  IP2STR(&event->ip_info.ip));
     }
 }
+/* wifi/ip event handler }}} */
 
 void smoke_machine_wifi_init(void)
 {
