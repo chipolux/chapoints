@@ -134,7 +134,7 @@ ApplicationWindow {
                     "cost": 1,
                     "is_paused": online ? "false" : "true",
                     "is_global_cooldown_enabled": "true",
-                    "global_cooldown_seconds": 2 * 60,
+                    "global_cooldown_seconds": 50,
                     "should_redemptions_skip_request_queue": "false"
                 }
                 twitch.updateReward(data)
@@ -226,7 +226,7 @@ ApplicationWindow {
                         "cost": 100,
                         "is_paused": "false",
                         "is_global_cooldown_enabled": "true",
-                        "global_cooldown_seconds": 60,
+                        "global_cooldown_seconds": 30,
                         "should_redemptions_skip_request_queue": "false"
                     }
                     twitch.updateReward(data)
@@ -243,7 +243,7 @@ ApplicationWindow {
                         "id": shockReward.id,
                         "is_paused": "true",
                         "is_global_cooldown_enabled": "true",
-                        "global_cooldown_seconds": 60,
+                        "global_cooldown_seconds": 30,
                         "should_redemptions_skip_request_queue": "false"
                     }
                     twitch.updateReward(data)
@@ -296,7 +296,7 @@ ApplicationWindow {
                         "is_paused": "true",
                         "is_enabled": "true",
                         "is_global_cooldown_enabled": "true",
-                        "global_cooldown_seconds": 2 * 60,
+                        "global_cooldown_seconds": 50,
                         "should_redemptions_skip_request_queue": "false"
                     }
                     twitch.createReward(data)
@@ -314,7 +314,7 @@ ApplicationWindow {
                         "cost": 1,
                         "is_paused": "false",
                         "is_global_cooldown_enabled": "true",
-                        "global_cooldown_seconds": 2 * 60,
+                        "global_cooldown_seconds": 50,
                         "should_redemptions_skip_request_queue": "false"
                     }
                     twitch.updateReward(data)
@@ -331,7 +331,7 @@ ApplicationWindow {
                         "id": smokeReward.id,
                         "is_paused": "true",
                         "is_global_cooldown_enabled": "true",
-                        "global_cooldown_seconds": 2 * 60,
+                        "global_cooldown_seconds": 50,
                         "should_redemptions_skip_request_queue": "false"
                     }
                     twitch.updateReward(data)
