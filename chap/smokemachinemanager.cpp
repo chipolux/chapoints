@@ -7,7 +7,7 @@ SmokeMachineManager::SmokeMachineManager(QObject *parent)
     , m_nam(new QNetworkAccessManager(this))
     , m_pingTimer(new QTimer(this))
     , m_online(false)
-    , m_ipAddress(u"192.168.1.222"_qs)
+    , m_ipAddress(u"192.168.1.224"_qs)
     , m_duration(10) // seconds
 {
     // periodically check that the collar is still online
