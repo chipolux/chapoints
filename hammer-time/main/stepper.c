@@ -13,9 +13,9 @@ static const char *TAG = "ht-stepper";
 
 // pin definitions for stepper
 static const int IN1 = 12;
-static const int IN2 = 13;
-static const int IN3 = 14;
-static const int IN4 = 27;
+static const int IN2 = 14;
+static const int IN3 = 27;
+static const int IN4 = 26;
 
 // timer handles
 static gptimer_handle_t TIMER = NULL;
